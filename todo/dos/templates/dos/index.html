@@ -10,7 +10,7 @@
 
     {% for do in dos %}
         <div>
-
+            <a href="{% url 'update' do.id %}">check</a>
             {% if do.completed == True %}
                 <strike>{{do}}</strike>
             {% else %}
@@ -18,6 +18,7 @@
             {% endif %}
             <a href="{% url 'edit' do.id %}">edit</a>
             <a href="{% url 'delete' do.id %}">delete</a>
+            
 
         </div>
     {% endfor %}

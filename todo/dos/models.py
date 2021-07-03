@@ -7,3 +7,6 @@ class Do(models.Model):
 
     def __str__(self):
         return self.title
+
+    def update_completion(self):
+        self.completed = not self.completed

@@ -38,3 +38,9 @@ def delete_do(request, primary_key):
     item = Do.objects.get(id=primary_key)
     item.delete()
     return redirect('/')
+
+def update_completion(request, primary_key):
+    item = Do.objects.get(id=primary_key)
+    item.update_completion()
+    item.save()
+    return redirect('/')
