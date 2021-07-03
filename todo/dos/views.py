@@ -33,3 +33,8 @@ def edit_do(request, primary_key):
     context = {'form':form}
 
     return render(request, 'dos/edit.html', context)
+
+def delete_do(request, primary_key):
+    item = Do.objects.get(id=primary_key)
+    item.delete()
+    return redirect('/')

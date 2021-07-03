@@ -17,5 +17,7 @@
                 <span>{{do}}</span>
             {% endif %}
             <a href="{% url 'edit' do.id %}">edit</a>
+            <a href="{% url 'delete' do.id %}">delete</a>
+
         </div>
     {% endfor %}
