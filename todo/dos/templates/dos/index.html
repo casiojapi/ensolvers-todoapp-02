@@ -1,1 +1,12 @@
 <h1>to-do list</h1>
+
+    {% for do in dos %}
+        <div>
+
+            {% if do.completed == True %}
+                <strike>{{do}}</strike>
+            {% else %}
+                <span>{{do}}</span>
+            {% endif %}
+        </div>
+    {% endfor %}
