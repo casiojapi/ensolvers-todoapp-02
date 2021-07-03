@@ -16,5 +16,6 @@
             {% else %}
                 <span>{{do}}</span>
             {% endif %}
+            <a href="{% url 'edit' do.id %}">edit</a>
         </div>
     {% endfor %}

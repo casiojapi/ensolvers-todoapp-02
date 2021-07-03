@@ -1,0 +1,11 @@
+<div>
+    <h1 class="title">update task</h1>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        {{ form.title }}
+        <input class="submit" type="submit" name="update task">
+    </form>
+
+</div>
